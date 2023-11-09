@@ -256,11 +256,12 @@ static public class NGUIMath
 	static public Vector3 ApplyHalfPixelOffset (Vector3 pos)
 	{
 		RuntimePlatform platform = Application.platform;
-
-		if (platform == RuntimePlatform.WindowsPlayer ||
-			platform == RuntimePlatform.WindowsWebPlayer ||
-			platform == RuntimePlatform.WindowsEditor ||
-			platform == RuntimePlatform.XBOX360)
+		// Error-2
+		//if (platform == RuntimePlatform.WindowsPlayer ||
+		//	platform == RuntimePlatform.WindowsWebPlayer ||
+		//	platform == RuntimePlatform.WindowsEditor ||
+		//	platform == RuntimePlatform.XBOX360)
+		if (platform == RuntimePlatform.WindowsEditor)
 		{
 			pos.x = pos.x - 0.5f;
 			pos.y = pos.y + 0.5f;
@@ -278,10 +279,12 @@ static public class NGUIMath
 	{
 		RuntimePlatform platform = Application.platform;
 
-		if (platform == RuntimePlatform.WindowsPlayer ||
-			platform == RuntimePlatform.WindowsWebPlayer ||
-			platform == RuntimePlatform.WindowsEditor ||
-			platform == RuntimePlatform.XBOX360)
+		//if (platform == RuntimePlatform.WindowsPlayer ||
+		//	platform == RuntimePlatform.WindowsWebPlayer ||
+		//	platform == RuntimePlatform.WindowsEditor ||
+		//	platform == RuntimePlatform.XBOX360)
+		// Error-3
+		if (platform == RuntimePlatform.WindowsEditor)
 		{
 			if (Mathf.RoundToInt(scale.x) == (Mathf.RoundToInt(scale.x * 0.5f) * 2)) pos.x = pos.x - 0.5f;
 			if (Mathf.RoundToInt(scale.y) == (Mathf.RoundToInt(scale.y * 0.5f) * 2)) pos.y = pos.y + 0.5f;

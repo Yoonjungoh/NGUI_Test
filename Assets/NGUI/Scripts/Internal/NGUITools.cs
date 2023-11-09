@@ -54,8 +54,10 @@ static public class NGUITools
 	{
 		get
 		{
-			return Application.platform != RuntimePlatform.WindowsWebPlayer &&
-				Application.platform != RuntimePlatform.OSXWebPlayer;
+			// Error-1
+			//return Application.platform != RuntimePlatform.WindowsWebPlayer &&
+			//	Application.platform != RuntimePlatform.OSXWebPlayer;
+			return true;
 		}
 	}
 

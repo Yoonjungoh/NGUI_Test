@@ -949,9 +949,11 @@ public class UIPanel : MonoBehaviour
 
 		RuntimePlatform platform = Application.platform;
 
-		if (platform == RuntimePlatform.WindowsPlayer ||
-			platform == RuntimePlatform.WindowsWebPlayer ||
-			platform == RuntimePlatform.WindowsEditor)
+		if (platform == RuntimePlatform.WindowsEditor
+			// Error-5
+			//platform == RuntimePlatform.WindowsPlayer ||
+			//platform == RuntimePlatform.WindowsWebPlayer ||
+			)
 		{
 			range.x -= 0.5f;
 			range.y += 0.5f;
